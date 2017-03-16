@@ -346,21 +346,20 @@
 
       
         
-          
-            <p>1.什么是runtime？<br>1&gt; runtime是一套底层的C语言API（包含很多强大实用的C语言数据类型、C语言函数）<br>2&gt; 实际上，平时我们编写的OC代码，底层都是基于runtime实现的</p>
+          <p>1.什么是runtime？<br>1&gt; runtime是一套底层的C语言API（包含很多强大实用的C语言数据类型、C语言函数）<br>2&gt; 实际上，平时我们编写的OC代码，底层都是基于runtime实现的</p>
 <ul>
 <li>也就是说，平时我们编写的OC代码，最终都是转成了底层的runtime代码（C语言代码）</li>
 </ul>
 <p>2.runtime有啥用？<br>1&gt; 能动态产生一个类、一个成员变量、一个方法<br>2&gt; 能动态修改一个类、一个成员变量、一个方法<br>3&gt; 能动态删除一个类、一个成员变量、一个方法</p>
 <p>3.常见的函数、头文件</p>
-<p>#import <objc runtime.h=""> : 成员变量、类、方法<br>Ivar <em> class_copyIvarList : 获得某个类内部的所有成员变量<br>Method </em> class_copyMethodList : 获得某个类内部的所有方法<br>Method class_getInstanceMethod : 获得某个实例方法（对象方法，减号-开头）<br>Method class_getClassMethod : 获得某个类方法（加号+开头）<br>method_exchangeImplementations : 交换2个方法的具体实现</objc></p>
-<p>4.常用方法</p>
-<p>//获取属性列表<br>    objc_property_t <em>propertyList = class_copyPropertyList([self class], &amp;count);<br>    for (unsigned int i=0; i&lt;count; i++) {<br>        const char </em>propertyName = property_getName(propertyList[i]);<br>        NSLog(@”property—-&gt;%@”, [NSString stringWithUTF8String:propertyName]);<br>    }</p>
-<p>//获取方法列表<br>    Method *methodList = class_copyMethodList([self class], &amp;count);<br>    for (unsigned int i; i&lt;count; i++) {<br>        Method method = methodList[i];<br>        NSLog(@”method—-&gt;%@”, NSStringFromSelector(method_getName(method)));<br>    }</p>
-<p>//获取成员变量列表<br>    Ivar <em>ivarList = class_copyIvarList([self class], &amp;count);<br>    for (unsigned int i; i&lt;count; i++) {<br>        Ivar myIvar = ivarList[i];<br>        const char </em>ivarName = ivar_getName(myIvar);<br>        NSLog(@”Ivar—-&gt;%@”, [NSString stringWithUTF8String:ivarName]);<br>    }</p>
-<p>//获取协议列表<br>    __unsafe_unretained Protocol <em>*protocolList = class_copyProtocolList([self class], &amp;count);<br>    for (unsigned int i; i&lt;count; i++) {<br>        Protocol </em>myProtocal = protocolList[i];<br>        const char *protocolName = protocol_getName(myProtocal);<br>        NSLog(@”protocol—-&gt;%@”, [NSString stringWithUTF8String:protocolName]);<br>    }</p>
-
-          
+<p>#import <objc/runtime.h> : 成员变量、类、方法<br>Ivar <em> class_copyIvarList : 获得某个类内部的所有成员变量<br>Method </em> class_copyMethodList : 获得某个类内部的所有方法<br>Method class_getInstanceMethod : 获得某个实例方法（对象方法，减号-开头）<br>Method class_getClassMethod : 获得某个类方法（加号+开头）<br>method_exchangeImplementations : 交换2个方法的具体实现</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/16/关于runtime/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
