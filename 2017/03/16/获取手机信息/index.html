@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="iOS的APP的应用开发的过程中，有时为了bug跟踪或者获取用反馈的需要自动收集用户设备、系统信息、应用信息等等，这些信息方便开发者诊断问题，当然这些信息是用户的非隐私信息，是通过开发api可以获取到的。那么通过那些api可以获取这些信息呢，iOS的SDK中提供了UIDevice，NSBundle，NSLocale。
 1.UIDeviceUIDevice提供了多种属性、类函数及状态通知，帮助我们全">
-<meta property="og:updated_time" content="2017-03-16T09:48:16.000Z">
+<meta property="og:updated_time" content="2017-03-16T09:49:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="获取手机信息">
 <meta name="twitter:description" content="iOS的APP的应用开发的过程中，有时为了bug跟踪或者获取用反馈的需要自动收集用户设备、系统信息、应用信息等等，这些信息方便开发者诊断问题，当然这些信息是用户的非隐私信息，是通过开发api可以获取到的。那么通过那些api可以获取这些信息呢，iOS的SDK中提供了UIDevice，NSBundle，NSLocale。
@@ -347,13 +347,22 @@
         <p>iOS的APP的应用开发的过程中，有时为了bug跟踪或者获取用反馈的需要自动收集用户设备、系统信息、应用信息等等，这些信息方便开发者诊断问题，当然这些信息是用户的非隐私信息，是通过开发api可以获取到的。那么通过那些api可以获取这些信息呢，iOS的SDK中提供了UIDevice，NSBundle，NSLocale。</p>
 <p>1.UIDevice<br>UIDevice提供了多种属性、类函数及状态通知，帮助我们全方位了解设备状况。从检测电池电量到定位设备与临近感应，UIDevice所做的工作就是为应用程序提供用户及设备的一些信息。UIDevice类还能够收集关于设备的各种具体细节，例如机型及iOS版本等。其中大部分属性都对开发工作具有积极的辅助作用。下面的代码简单的使用UIDevice获取手机属性。</p>
 <a id="more"></a>
-<p>//设备相关信息的获取<br>1.1NSString *strName = [[UIDevice currentDevice] name];<br>1.2NSLog(@”设备名称：%@”, strName);//e.g. “My iPhone”  </p>
-<p>1.3NSString *strId = [[UIDevice currentDevice] uniqueIdentifier];<br>1.4NSLog(@”设备唯一标识：%@”, strId);//UUID,5.0后不可用  </p>
-<p>1.5NSString *strSysName = [[UIDevice currentDevice] systemName];<br>1.6NSLog(@”系统名称：%@”, strSysName);// e.g. @”iOS”  </p>
-<p>1.7NSString *strSysVersion = [[UIDevice currentDevice] systemVersion];<br>1.8NSLog(@”系统版本号：%@”, strSysVersion);// e.g. @”4.0”  </p>
-<p>1.9NSString *strModel = [[UIDevice currentDevice] model];<br>2.1NSLog(@”设备模式：%@”, strModel);// e.g. @”iPhone”, @”iPod touch”  </p>
-<p>2.2NSString *strLocModel = [[UIDevice currentDevice] localizedModel];<br>2.3NSLog(@”本地设备模式：%@”, strLocModel);// localized version of model  </p>
-<p>2.NSBundle<br>bundle是一个目录,其中包含了程序会使用到的资源. 这些资源包含了如图像,声音,编译好的代码,nib文件(用户也会把bundle称为plug-in). 对应bundle,cocoa提供了类NSBundle.一个应用程序看上去和其他文件没有什么区别. 但是实际上它是一个包含了nib文件,编译代码,以及其他资源的目录. 我们把这个目录叫做程序的main bundle。通过这个路径可以获取到应用的信息，例如应用名、版本号等。</p>
+<p>//设备相关信息的获取<br>    NSString *strName = [[UIDevice currentDevice] name];<br>    NSLog(@”设备名称：%@”, strName);//e.g. “My iPhone”  </p>
+<pre><code>NSString *strId = [[UIDevice currentDevice] uniqueIdentifier];  
+NSLog(@&quot;设备唯一标识：%@&quot;, strId);//UUID,5.0后不可用  
+
+NSString *strSysName = [[UIDevice currentDevice] systemName];  
+NSLog(@&quot;系统名称：%@&quot;, strSysName);// e.g. @&quot;iOS&quot;  
+
+NSString *strSysVersion = [[UIDevice currentDevice] systemVersion];  
+NSLog(@&quot;系统版本号：%@&quot;, strSysVersion);// e.g. @&quot;4.0&quot;  
+
+NSString *strModel = [[UIDevice currentDevice] model];  
+NSLog(@&quot;设备模式：%@&quot;, strModel);// e.g. @&quot;iPhone&quot;, @&quot;iPod touch&quot;  
+
+NSString *strLocModel = [[UIDevice currentDevice] localizedModel];  
+NSLog(@&quot;本地设备模式：%@&quot;, strLocModel);// localized version of model  
+</code></pre><p>2.NSBundle<br>bundle是一个目录,其中包含了程序会使用到的资源. 这些资源包含了如图像,声音,编译好的代码,nib文件(用户也会把bundle称为plug-in). 对应bundle,cocoa提供了类NSBundle.一个应用程序看上去和其他文件没有什么区别. 但是实际上它是一个包含了nib文件,编译代码,以及其他资源的目录. 我们把这个目录叫做程序的main bundle。通过这个路径可以获取到应用的信息，例如应用名、版本号等。</p>
 <p>//app应用相关信息的获取<br>NSDictionary *dicInfo = [[NSBundle mainBundle] infoDictionary];<br>//    CFShow(dicInfo);  </p>
 <p>NSString *strAppName = [dicInfo objectForKey:@”CFBundleDisplayName”];<br>NSLog(@”App应用名称：%@”, strAppName);  </p>
 <p>NSString *strAppVersion = [dicInfo objectForKey:@”CFBundleShortVersionString”];<br>NSLog(@”App应用版本：%@”, strAppVersion);  </p>
