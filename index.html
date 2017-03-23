@@ -260,6 +260,143 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/如何对UIScrollView进行自动布局/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eden">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://imgtu.5011.net/uploads/content/20170302/9420071488450148.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/23/如何对UIScrollView进行自动布局/" itemprop="url">
+                  如何对UIScrollView进行自动布局（Autolayout）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T10:31:37+08:00">
+                2017-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/23/如何对UIScrollView进行自动布局/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/23/如何对UIScrollView进行自动布局/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <pre><code>说 UIScrollView是个刺儿头，实在没有夸张，这是由于scrollview本身contentSize、contentInsets等复杂的特性 导致，苹果文档在讲autolayout的时候甚至专门拿出一节讲如何对scrollview进行自动布局。
+</code></pre><p>一、竖屏布局</p>
+<p>为 了方便布局，对于在逻辑或者结构上比较紧密的多个视图组件，我们往往采取化零为整的办法，将多个view放在一个containerview中，让这个父 view独自去应对外部情况的变化，将内部和外部隔绝开来，本例中，就是将头像和文字label放入一个contanierview中的。这样，我们布局 的主要工作就集中在两个组件之间了：头像所在的containerview和scrollview。同样的，对于scrollview中的子view，我 们同样也可以将其放在同一个父的Container view中，然后将这个container view作为scrollview的子view也即content view，这样我们对scroll view 的布局就可以简化为对content view的布局，而content view里面的子view相对于content view的布局就是普通的布局了，剩下的只需要我们解决好scroll view和content view的布局即可。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/23/如何对UIScrollView进行自动布局/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/18/UITableViewCell自定义左滑删除按钮/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1130,7 +1267,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

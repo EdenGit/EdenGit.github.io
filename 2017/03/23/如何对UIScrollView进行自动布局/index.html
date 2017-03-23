@@ -87,22 +87,22 @@
 
 
 
-<meta name="description" content="建立一个可变数组, 可以删除的, 作为测试数据@property (nonatomic, strong) NSMutableArray *arrM;
-
-初始化:_arrM = [[NSMutableArray alloc] initWithObjects:@”1”,@”2”,@”3”,@”4”,@”5”,@”6”,@”7”,@”8”,@”9”,@”10”,@”11”,@”12”, nil];">
+<meta name="description" content="说 UIScrollView是个刺儿头，实在没有夸张，这是由于scrollview本身contentSize、contentInsets等复杂的特性 导致，苹果文档在讲autolayout的时候甚至专门拿出一节讲如何对scrollview进行自动布局。
+一、竖屏布局
+为 了方便布局，对于在逻辑或者结构上比较紧密的多个视图组件，我们往往采取化零为整的办法，将多个view放在一个containervi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UITableViewCell自定义左滑删除按钮">
-<meta property="og:url" content="http://yoursite.com/2017/03/18/UITableViewCell自定义左滑删除按钮/index.html">
+<meta property="og:title" content="如何对UIScrollView进行自动布局（Autolayout）">
+<meta property="og:url" content="http://yoursite.com/2017/03/23/如何对UIScrollView进行自动布局/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="建立一个可变数组, 可以删除的, 作为测试数据@property (nonatomic, strong) NSMutableArray *arrM;
-
-初始化:_arrM = [[NSMutableArray alloc] initWithObjects:@”1”,@”2”,@”3”,@”4”,@”5”,@”6”,@”7”,@”8”,@”9”,@”10”,@”11”,@”12”, nil];">
-<meta property="og:updated_time" content="2017-03-18T06:14:36.000Z">
+<meta property="og:description" content="说 UIScrollView是个刺儿头，实在没有夸张，这是由于scrollview本身contentSize、contentInsets等复杂的特性 导致，苹果文档在讲autolayout的时候甚至专门拿出一节讲如何对scrollview进行自动布局。
+一、竖屏布局
+为 了方便布局，对于在逻辑或者结构上比较紧密的多个视图组件，我们往往采取化零为整的办法，将多个view放在一个containervi">
+<meta property="og:updated_time" content="2017-03-23T02:38:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UITableViewCell自定义左滑删除按钮">
-<meta name="twitter:description" content="建立一个可变数组, 可以删除的, 作为测试数据@property (nonatomic, strong) NSMutableArray *arrM;
-
-初始化:_arrM = [[NSMutableArray alloc] initWithObjects:@”1”,@”2”,@”3”,@”4”,@”5”,@”6”,@”7”,@”8”,@”9”,@”10”,@”11”,@”12”, nil];">
+<meta name="twitter:title" content="如何对UIScrollView进行自动布局（Autolayout）">
+<meta name="twitter:description" content="说 UIScrollView是个刺儿头，实在没有夸张，这是由于scrollview本身contentSize、contentInsets等复杂的特性 导致，苹果文档在讲autolayout的时候甚至专门拿出一节讲如何对scrollview进行自动布局。
+一、竖屏布局
+为 了方便布局，对于在逻辑或者结构上比较紧密的多个视图组件，我们往往采取化零为整的办法，将多个view放在一个containervi">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/18/UITableViewCell自定义左滑删除按钮/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/23/如何对UIScrollView进行自动布局/"/>
 
 
 
 
 
-  <title> UITableViewCell自定义左滑删除按钮 | Hexo </title>
+  <title> 如何对UIScrollView进行自动布局（Autolayout） | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/18/UITableViewCell自定义左滑删除按钮/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/如何对UIScrollView进行自动布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eden">
@@ -286,7 +286,7 @@
             
             
               
-                UITableViewCell自定义左滑删除按钮
+                如何对UIScrollView进行自动布局（Autolayout）
               
             
           </h1>
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-18T14:13:17+08:00">
-                2017-03-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T10:31:37+08:00">
+                2017-03-23
               </time>
             
 
@@ -320,8 +320,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/18/UITableViewCell自定义左滑删除按钮/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/18/UITableViewCell自定义左滑删除按钮/" itemprop="commentCount"></span>
+                <a href="/2017/03/23/如何对UIScrollView进行自动布局/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/23/如何对UIScrollView进行自动布局/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -347,29 +347,30 @@
       
 
       
-        <ol>
-<li>建立一个可变数组, 可以删除的, 作为测试数据<br>@property (nonatomic, strong) NSMutableArray *arrM;</li>
-</ol>
-<p>初始化:<br>_arrM = [[NSMutableArray alloc] initWithObjects:@”1”,@”2”,@”3”,@”4”,@”5”,@”6”,@”7”,@”8”,@”9”,@”10”,@”11”,@”12”, nil];</p>
+        <pre><code>说 UIScrollView是个刺儿头，实在没有夸张，这是由于scrollview本身contentSize、contentInsets等复杂的特性 导致，苹果文档在讲autolayout的时候甚至专门拿出一节讲如何对scrollview进行自动布局。
+</code></pre><p>一、竖屏布局</p>
+<p>为 了方便布局，对于在逻辑或者结构上比较紧密的多个视图组件，我们往往采取化零为整的办法，将多个view放在一个containerview中，让这个父 view独自去应对外部情况的变化，将内部和外部隔绝开来，本例中，就是将头像和文字label放入一个contanierview中的。这样，我们布局 的主要工作就集中在两个组件之间了：头像所在的containerview和scrollview。同样的，对于scrollview中的子view，我 们同样也可以将其放在同一个父的Container view中，然后将这个container view作为scrollview的子view也即content view，这样我们对scroll view 的布局就可以简化为对content view的布局，而content view里面的子view相对于content view的布局就是普通的布局了，剩下的只需要我们解决好scroll view和content view的布局即可。</p>
 <a id="more"></a>
-<p>2.实现关键代理方法<br>这里仅做两个自定义按钮</p>
-<ul>
-<li>(NSArray <em>)tableView:(UITableView </em>)tableView editActionsForRowAtIndexPath:(NSIndexPath <em>)indexPath<br>{<br>//UITableViewRowAction是iOS8才有的，title不想要打了空格占着大小<br>UITableViewRowAction </em>deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@”           “ handler:^(UITableViewRowAction <em>action, NSIndexPath </em>indexPath) {</li>
-</ul>
-<p>[self.arrM removeObjectAtIndex:indexPath.row];<br>[tableView reloadData];</p>
-<p>NSLog(@”点击删除”);<br>}];</p>
-<p>UITableViewRowAction <em>shareRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@”           “ handler:^(UITableViewRowAction </em>action, NSIndexPath *indexPath) {<br>NSLog(@”点击分享”);<br>}];</p>
-<p>// 这个地方：先加入的在右边<br>return @[shareRowAction, deleteRowAction];<br>}</p>
-<p>3.在自定义cell的.m文件中重写layoutSubviews方法</p>
-<p>-(void)layoutSubviews {</p>
-<p>for (UIView *subView in self.subviews) {<br>if([subView isKindOfClass:NSClassFromString(@”UITableViewCellDeleteConfirmationView”)]) {</p>
-<p>// 拿到subView之后再获取子控件</p>
-<p>// 因为上面删除按钮是第二个加的所以下标是1<br>UIView <em>deleteConfirmationView = subView.subviews[1];<br>//改背景颜色<br>deleteConfirmationView.backgroundColor = [UIColor colorWithRed:204.0/255.0 green:42.0/255.0 blue:62.0/255.0 alpha:1.0];<br>for (UIView </em>deleteView in deleteConfirmationView.subviews) {</p>
-<p>self.deleteImage.contentMode = UIViewContentModeScaleAspectFit;<br>self.deleteImage.image = [UIImage imageNamed:@”ceshi1”];<br>self.deleteImage.frame = CGRectMake(0, 0, deleteView.frame.size.width, deleteView.frame.size.height);<br>[deleteView addSubview:self.deleteImage];<br>}</p>
-<p>// 这里是右边的<br>UIView <em>shareConfirmationView = subView.subviews[0];<br>shareConfirmationView.backgroundColor = [UIColor colorWithRed:142.0/255.0 green:201.0/255.0 blue:75.0/255.0 alpha:1.0];<br>for (UIView </em>shareView in shareConfirmationView.subviews) {</p>
-<p>self.shareImage.contentMode = UIViewContentModeScaleAspectFit;<br>self.shareImage.image = [UIImage imageNamed:@”ceshi2”];<br>self.shareImage.frame = CGRectMake(0, 0, shareView.frame.size.width, shareView.frame.size.height);<br>[shareView addSubview:self.shareImage];<br>}<br>}<br>}</p>
-<p>}</p>
-<p>注意一:  其中我们在添加图片时应该注意使用懒加载的控件方式去定义, 不然会导致多次调 layoutSubviews 方法, 多次添加image<br>注意二: 我们在设置cell的时候要注意做判空处理</p>
+<p>打 开storyboard，首先对默认的size class进行布局（wAny, hAny）（关于size class的使用，详见我上一篇博文）,对头像的container view添加四个约束以确定其frame (x, y, width, height)，这四个约束分别是：水平居中、距顶端定长、定宽、定长，布局基本功不再多言，无非点击、选中、设置……详情请参见苹果官方文档，</p>
+<p>接下来就是对 scrollview进行布局，我们知道scroll view除了自身的布局需要考虑（x, y, width, height）外，还有一个contentSize属性也必须要在布局的过程中进行确定，contentSize是UIScrollView用于确定它所 要展示的内容尺寸的大小，而这个contentSize在布局中实际上是又scroll view的子view :content view的宽和高实现的，注意：我们不能将content view的宽和高的约束设定为由scroll view决定（如和scroll view等宽、等高）,否则，Xcode会有警告：scroll view的content size不确定！<br>在这种情况下，我们必须要对content view的布局约束引入scroll view之外其他参照物，我们拖进来一个辅助的view作为参照物or锚点</p>
+<p>通过这个参考view，确定content view的宽度和高度，尽管content view的尺寸可以不依赖于scroll view，但我们还不得不设定content view 和其父view的关系：具体而言就是要确定content view和scroll view的top, bottom, leading和trailing contstraints，这个地方可能比较具有迷惑性，原因是苹果对于这四个约束的使用在scroll view中做了变化：它不再是确定content view尺寸的依据，而是帮助scroll view中content view四周的边界（or你可以理解为留白），进而确定scroll view的contentSize属性。</p>
+<p>这样，默认size class的布局就算完成了，（注：content view的子view的布局这里不再详述）。</p>
+<p>二、横屏布局</p>
+<p>为了布局方 便，我们首先将storyboard中view的尺寸调整为667 * 375, iphone 6 横屏时的尺寸，然后将size class的height设置为compact模式（因为横屏时，高度处于“压缩”状态），这样我们就可以对横屏的状态进行单独的布局，Xcode对自动 布局通过size class的使用，灵活性大大提高（详细说明参加我上一篇博文），不同size class下约束相互隔离，甚至另外一个size class下添加的view也是不可见的（not installed）,这样我们布局工作起来就大大的简化了。</p>
+<p>前面需求中提到，在横屏模式我们希望中，将头像和scroll view按照左右顺序布局，这样可以有效的利用屏幕空间，给用户最好的使用体验（尤其是iphone6 &amp; plus出来后）。</p>
+<p>考虑横屏的情况，我们不知道屏幕的具体宽度（实际从4s到6 plus可能有4种数值），我们想确定头像和scroll view 的具体位置，这时，我们又要找一个参照物了，有了参照我们就能很好的确定各自的约束。这种参照物的思想在自动布局中有着广泛的应用，它可以有效的帮我们降 低布局的复杂度、提高布局的灵活性。</p>
+<p>我们仍然选取一个view作为参考物or 锚点，我们把它的位置放在整个屏幕的正中间，这个view我们称之为：middle anchor view，头像的trailing space和scroll view 的leading space就都可以以这个middle anchor view为锚确定x坐标值了。接着，头像和scroll view以及content view的其他约束可以按照竖屏时的思路依次添加。</p>
+<p>注意，因为前面竖屏的时候我们使用了（wAny, hAny）的宽和高都任意的size class，它包含（wAny, hCompact）这种情况，因此，在上一个size class设置的布局元素在当前的size class中依然都存在，为了防止布局干扰，我们可以将这些布局全部清除掉再重新布局：</p>
+<p>三、总结</p>
+<p>1.布局之前考虑好需求是什么，横竖屏时的UI展示效果是什么；</p>
+<p>2.布局UIScrollView的时候将其子view放在一个content view中去，简化布局；</p>
+<p>3.布局content view的时候必须要引人第三方参照物（view）,已确定其尺寸，注意不能根据scroll view 来确定content view的尺寸；</p>
+<ol>
+<li>一定要设置content view 相对于scroll view 的上下左右（top, bottom, leading, trailing）间距，这些设置不是为了确定content view的尺寸，而是帮助scroll view 确定其contentSize;</li>
+</ol>
+<p>5.布局时注意一些小技巧的使用，可时布局工作事半功倍：</p>
+<p>a. 将多个view放入一个container view的化整为零思想；</p>
+<p>b. 引入参照物or 锚点，辅助定位、布局.</p>
 
       
     </div>
@@ -406,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/17/程序启动的完整过程/" rel="next" title="程序启动的完整过程">
-                <i class="fa fa-chevron-left"></i> 程序启动的完整过程
+              <a href="/2017/03/18/UITableViewCell自定义左滑删除按钮/" rel="next" title="UITableViewCell自定义左滑删除按钮">
+                <i class="fa fa-chevron-left"></i> UITableViewCell自定义左滑删除按钮
               </a>
             
           </div>
@@ -415,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/23/如何对UIScrollView进行自动布局/" rel="prev" title="如何对UIScrollView进行自动布局（Autolayout）">
-                如何对UIScrollView进行自动布局（Autolayout） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,8 +464,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/18/UITableViewCell自定义左滑删除按钮/"
-           data-title="UITableViewCell自定义左滑删除按钮" data-url="http://yoursite.com/2017/03/18/UITableViewCell自定义左滑删除按钮/">
+      <div class="ds-thread" data-thread-key="2017/03/23/如何对UIScrollView进行自动布局/"
+           data-title="如何对UIScrollView进行自动布局（Autolayout）" data-url="http://yoursite.com/2017/03/23/如何对UIScrollView进行自动布局/">
       </div>
     
   </div>
