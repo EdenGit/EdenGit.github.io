@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="关于NSUserDefaults官方文档https://developer.apple.com/reference/foundation/userdefaults
 一:NSUserDefaults是什么，有什么用处对于应用来说，每个用户都有自己的独特偏好设置，而好的应用会让用户根据喜好选择合适的使用方式，把这些偏好记录在应用包的plist文件中，通过NSUserDefaults类来访问，这是NSU">
-<meta property="og:updated_time" content="2017-03-24T06:29:27.000Z">
+<meta property="og:updated_time" content="2017-03-24T06:32:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS中NSUserDefaults详解">
 <meta name="twitter:description" content="关于NSUserDefaults官方文档https://developer.apple.com/reference/foundation/userdefaults
@@ -399,7 +399,8 @@ NSDictionary *defaultPrefs = [NSDictionary dictionaryWithContentsOfURL:defaultPr
 全局域（global domain）则存储着系统的设置
 语言域（language-specific domains）则包括地区、日期等
 参数域（ argument domain）有最高优先权
-</code></pre>
+</code></pre><p>写入了NSUserDefaults数据, 那么我们怎么删除呢? 其实很简单:<br>    [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];<br>    [[NSUserDefaults standardUserDefaults] synchronize];</p>
+
       
     </div>
 
