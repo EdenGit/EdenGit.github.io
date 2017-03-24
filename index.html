@@ -260,6 +260,150 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/24/iOS中NSUserDefaults详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eden">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://imgtu.5011.net/uploads/content/20170302/9420071488450148.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/24/iOS中NSUserDefaults详解/" itemprop="url">
+                  iOS中NSUserDefaults详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T14:24:31+08:00">
+                2017-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/24/iOS中NSUserDefaults详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/24/iOS中NSUserDefaults详解/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>关于NSUserDefaults官方文档<br><a href="https://developer.apple.com/reference/foundation/userdefaults">https://developer.apple.com/reference/foundation/userdefaults</a></p>
+<p>一:NSUserDefaults是什么，有什么用处<br>对于应用来说，每个用户都有自己的独特偏好设置，而好的应用会让用户根据喜好选择合适的使用方式，把这些偏好记录在应用包的plist文件中，通过NSUserDefaults类来访问，这是NSUserDefaults的常用姿势。如果有一些设置你希望用户即使升级后还可以继续使用，比如玩游戏时得过的最高分、喜好和通知设置、主题颜色甚至一个用户头像，那么你可以使用NSUserDefaults来存储这些信息，如果有更多需求，可以了解数据持久化相关的知识。<br>具体来说NSUserDefaults是iOS系统提供的一个单例类(iOS提供了若干个单例类)，通过类方法standardUserDefaults可以获取NSUserDefaults单例。如：<br>    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];</p>
+<p>NSUserDefaults单例以key-value的形式存储了一系列偏好设置，key是名称，value是相应的数据。存/取数据时可以使用方法objectForKey:和setObject:forKey:来把对象存储到相应的plist文件中，或者读取，既然是plist文件，那么对象的类型则必须是plist文件可以存储的类型，正如官方文档中提到的——</p>
+<pre><code>NSData
+NSString
+NSNumber
+NSDate
+NSArray
+NSDictionary
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/24/iOS中NSUserDefaults详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/IQKeyboardManager框架详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1404,7 +1548,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

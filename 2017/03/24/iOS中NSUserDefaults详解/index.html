@@ -87,19 +87,19 @@
 
 
 
-<meta name="description" content="每一个iOS应用的开发者在工作中都会遇到需要用户键盘输入数据的需求，而输入框(UITextField/UITextView)的父界面可能是普通的UIView，也可能是UIScrollView，UITableView，UICollectionView 等。而如果输入框位于屏幕的底部，弹起的键盘很可能覆盖输入框，导致用户就看不到输入结果，体验较差。
-那么这篇博客主要就是要介绍IQKeyboardMan">
+<meta name="description" content="关于NSUserDefaults官方文档https://developer.apple.com/reference/foundation/userdefaults
+一:NSUserDefaults是什么，有什么用处对于应用来说，每个用户都有自己的独特偏好设置，而好的应用会让用户根据喜好选择合适的使用方式，把这些偏好记录在应用包的plist文件中，通过NSUserDefaults类来访问，这是NSU">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IQKeyboardManager框架详解">
-<meta property="og:url" content="http://yoursite.com/2017/03/23/IQKeyboardManager框架详解/index.html">
+<meta property="og:title" content="iOS中NSUserDefaults详解">
+<meta property="og:url" content="http://yoursite.com/2017/03/24/iOS中NSUserDefaults详解/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="每一个iOS应用的开发者在工作中都会遇到需要用户键盘输入数据的需求，而输入框(UITextField/UITextView)的父界面可能是普通的UIView，也可能是UIScrollView，UITableView，UICollectionView 等。而如果输入框位于屏幕的底部，弹起的键盘很可能覆盖输入框，导致用户就看不到输入结果，体验较差。
-那么这篇博客主要就是要介绍IQKeyboardMan">
-<meta property="og:updated_time" content="2017-03-23T02:49:20.000Z">
+<meta property="og:description" content="关于NSUserDefaults官方文档https://developer.apple.com/reference/foundation/userdefaults
+一:NSUserDefaults是什么，有什么用处对于应用来说，每个用户都有自己的独特偏好设置，而好的应用会让用户根据喜好选择合适的使用方式，把这些偏好记录在应用包的plist文件中，通过NSUserDefaults类来访问，这是NSU">
+<meta property="og:updated_time" content="2017-03-24T06:29:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IQKeyboardManager框架详解">
-<meta name="twitter:description" content="每一个iOS应用的开发者在工作中都会遇到需要用户键盘输入数据的需求，而输入框(UITextField/UITextView)的父界面可能是普通的UIView，也可能是UIScrollView，UITableView，UICollectionView 等。而如果输入框位于屏幕的底部，弹起的键盘很可能覆盖输入框，导致用户就看不到输入结果，体验较差。
-那么这篇博客主要就是要介绍IQKeyboardMan">
+<meta name="twitter:title" content="iOS中NSUserDefaults详解">
+<meta name="twitter:description" content="关于NSUserDefaults官方文档https://developer.apple.com/reference/foundation/userdefaults
+一:NSUserDefaults是什么，有什么用处对于应用来说，每个用户都有自己的独特偏好设置，而好的应用会让用户根据喜好选择合适的使用方式，把这些偏好记录在应用包的plist文件中，通过NSUserDefaults类来访问，这是NSU">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/23/IQKeyboardManager框架详解/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/24/iOS中NSUserDefaults详解/"/>
 
 
 
 
 
-  <title> IQKeyboardManager框架详解 | Hexo </title>
+  <title> iOS中NSUserDefaults详解 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +262,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/IQKeyboardManager框架详解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/24/iOS中NSUserDefaults详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eden">
@@ -283,7 +283,7 @@
             
             
               
-                IQKeyboardManager框架详解
+                iOS中NSUserDefaults详解
               
             
           </h1>
@@ -298,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T10:45:45+08:00">
-                2017-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T14:24:31+08:00">
+                2017-03-24
               </time>
             
 
@@ -317,8 +317,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/23/IQKeyboardManager框架详解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/23/IQKeyboardManager框架详解/" itemprop="commentCount"></span>
+                <a href="/2017/03/24/iOS中NSUserDefaults详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/24/iOS中NSUserDefaults详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -344,40 +344,62 @@
       
 
       
-        <p>每一个iOS应用的开发者在工作中都会遇到需要用户键盘输入数据的需求，而输入框(UITextField/UITextView)的父界面可能是普通的UIView，也可能是UIScrollView，UITableView，UICollectionView 等。而如果输入框位于屏幕的底部，弹起的键盘很可能覆盖输入框，导致用户就看不到输入结果，体验较差。</p>
-<p>那么这篇博客主要就是要介绍IQKeyboardManager框架的详细使用,使用IQKeyboardManager可以很容易地解决弹起键盘遮盖输入框的问题，并且易于集成，不需要侵入性地继承特定的类，也不需要实现某些奇怪的协议，满足大部分需求只需要少于5行代码。更让人惊喜的是IQKeyboardManager已经提供Swift版本。</p>
-<p>首先下载第三方库源码导入已有项目中(也可以使用CocoaPods), 然后只需要一行代码就可控制自动键盘处理事件在整个项目内是否启用。</p>
-<a id="more"></a>
-<p>// iOS delegate内应用入口</p>
-<ul>
-<li>(BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions {</li>
-</ul>
-<p>//关闭设置为NO, 默认值为NO.</p>
-<p>[IQKeyboardManager sharedManager].enable = YES;</p>
-<p>}</p>
-<p>1&gt;如果产品需要当键盘弹起时，点击背景收起键盘，也是一行代码解决。</p>
-<p>[IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;</p>
-<p>2&gt;而当产品需要支持内联编辑(Inline Editing), 这就需要隐藏键盘上的工具条(默认打开)</p>
-<p>[IQKeyboardManager sharedManager].enableAutoToolbar = NO;</p>
-<p>3&gt;如果当某一个输入框特定不需要键盘上的工具条时，一行代码</p>
-<p>textField.inputAccessoryView = [[UIView alloc] init];</p>
-<p>4&gt;如果因为不知名的原因需要在某个页面禁止自动键盘处理事件相应，也很简单。</p>
-<ul>
-<li>(void) viewWillAppear: (BOOL)animated {</li>
-</ul>
-<p>//打开键盘事件相应</p>
-<p>[IQKeyboardManager sharedManager].enable = YES;</p>
-<p>}</p>
-<ul>
-<li>(void) viewWillDisappear: (BOOL)animated {</li>
-</ul>
-<p>//关闭键盘事件相应</p>
-<p>[IQKeyboardManager sharedManager].enable = NO;</p>
-<p>}</p>
-<p>另外IQKeyboardManager支持屏幕旋转功能，这对一些应用特别有用。</p>
-<p>请注意的是，IQKeyboardManager还有一些未解决的问题列表:<br><a href="https://github.com/hackiftekhar/IQKeyboardManager/blob/master/KNOWN%20ISSUES.md" target="_blank" rel="external">https://github.com/hackiftekhar/IQKeyboardManager/blob/master/KNOWN%20ISSUES.md</a></p>
-<p> 如果使用过程发现问题，可以对照参考，免得浪费不必要的时间。</p>
+        <p>关于NSUserDefaults官方文档<br><a href="https://developer.apple.com/reference/foundation/userdefaults" target="_blank" rel="external">https://developer.apple.com/reference/foundation/userdefaults</a></p>
+<p>一:NSUserDefaults是什么，有什么用处<br>对于应用来说，每个用户都有自己的独特偏好设置，而好的应用会让用户根据喜好选择合适的使用方式，把这些偏好记录在应用包的plist文件中，通过NSUserDefaults类来访问，这是NSUserDefaults的常用姿势。如果有一些设置你希望用户即使升级后还可以继续使用，比如玩游戏时得过的最高分、喜好和通知设置、主题颜色甚至一个用户头像，那么你可以使用NSUserDefaults来存储这些信息，如果有更多需求，可以了解数据持久化相关的知识。<br>具体来说NSUserDefaults是iOS系统提供的一个单例类(iOS提供了若干个单例类)，通过类方法standardUserDefaults可以获取NSUserDefaults单例。如：<br>    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];</p>
+<p>NSUserDefaults单例以key-value的形式存储了一系列偏好设置，key是名称，value是相应的数据。存/取数据时可以使用方法objectForKey:和setObject:forKey:来把对象存储到相应的plist文件中，或者读取，既然是plist文件，那么对象的类型则必须是plist文件可以存储的类型，正如官方文档中提到的——</p>
+<pre><code>NSData
+NSString
+NSNumber
+NSDate
+NSArray
+NSDictionary
+</code></pre><a id="more"></a>
+<p>而如果需要存储plist文件不支持的类型，比如图片，可以先将其归档为NSData类型，再存入plist文件，需要注意的是，即使对象是NSArray或NSDictionary，他们存储的类型也应该是以上范围包括的。</p>
+<p>二:存/读不同类型数据<br>比如存/读一个整数、字符串和一张图片：</p>
+<pre><code>###存
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+[defaults setObject:@”jack“ forKey:@&quot;firstName&quot;];
+[defaults setInteger:10 forKey:@&quot;Age&quot;];
 
+UIImage *image =[UIImage imageNamed:@&quot;somename&quot;];
+NSData *imageData = UIImageJPEGRepresentation(image, 100);//把image归档为NSData
+[defaults setObject:imageData forKey:@&quot;image&quot;];
+
+[defaults synchronize];
+</code></pre><p>其中，方法synchronise是为了强制存储，其实并非必要，因为这个方法会在系统中默认调用，但是你确认需要马上就存储，这样做是可行的。</p>
+<pre><code>###读
+
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+NSString *firstName = [defaults objectForKey:@&quot;firstName&quot;]
+NSInteger age = [defaults integerForKey:@&quot;Age&quot;];
+
+NSData *imageData = [defaults dataForKey:@&quot;image&quot;];
+UIImage *image = [UIImage imageWithData:imageData];
+</code></pre><p>我们通过为三个数据设置key的方式把NSInteger、NSString和UIImage三种数据存储下来，其中图片是通过归档为NSData的方式进行存储的，除此之外，还可以被转为NSNumber或NSString类型。顺便提一句，这里NSInteger没有星号，因为NSInteger根据系统是64位还是32位来判断自身是long还是int类型，并且它也不是一个标准Objective-C对象。</p>
+<p>三:简便方法存取不同类型数据</p>
+<p>由上边的例子可以看到一个方法-setInteger:,这跟常用的-setObject：相比设置类型更明确。其实，NSUserDefaults提供了若干简便方法可以存储某些常用类型的值，例如：</p>
+<pre><code>- setBool:forKey:
+- setFloat:forKey:
+- setInteger:forKey:
+- setDouble:forKey:
+- setURL:forKey:
+</code></pre><p>这将使某些值的设置更简单。</p>
+<p>四:NSUserDefaults域<br>考虑这么一种情况：<br>    BOOL showTutorialOnLaunch = [[NSUserDefaults standardUserDefaults] boolForKey:@”ShowTutorial”];</p>
+<p>这种情况下，当key值@“ShowTutorial”已设置后会运行正确。但如果默认数据库没有这个key的默认值时，将会返回NO，这或许就不一定是你需要的值了，因为无法区分NO和no value，前一段所提到的简便方法大多有这种问题。</p>
+<p>解决方式：使用registerDefaults:方法<br>首先创建一个包含用户偏好设置信息的DefaultPreferences.plist文件，添加到target中。在运行时，app就可以加载这个文件并且把内容传到registerDefaults :</p>
+<pre><code>NSURL *defaultPrefsFile = [[NSBundle mainBundle]
+URLForResource:@&quot;DefaultPreferences&quot; withExtension:@&quot;plist&quot;];
+NSDictionary *defaultPrefs = [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
+[[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
+</code></pre><p>注意需要在每次启动app并且没有在user defaules中读取数据的时候调用以上方法，因为registerDefaults:不能把这些默认数据存储到硬盘上，所以application:didFinishLaunchingWithOptions是最合适的地方。<br>这样做的原因是：默认情况下，应用域是空的，没见键也没有值。当应用第一次设置某项用户偏好设置的值时，相应的值会通过指定的键加入应用域。当通过NSUserDefaults获取某项用户偏好设置的值时，NSUserDefaults会先在应用域中查找，如果找到了值，NSUserDefaults就会返回这个值。如果没有找到，NSUserDefaults就会在注册域中查找并返回默认值。</p>
+<p>五:域</p>
+<p>user defaults数据库中其实是由多个层级的域组成的，当你读取一个键值的数据时，NSUserDefaults从上到下透过域的层级寻找正确的值，不同的域有不同的功能，有些域是可持久的，有些域则不行。</p>
+<pre><code>应用域（application domain）是最重要的域，它存储着你app通过NSUserDefaults set...forKey添加的设置。
+注册域（registration domain）仅有较低的优先权，只有在应用域没有找到值时才从注册域去寻找。
+全局域（global domain）则存储着系统的设置
+语言域（language-specific domains）则包括地区、日期等
+参数域（ argument domain）有最高优先权
+</code></pre>
       
     </div>
 
@@ -413,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/23/如何对UIScrollView进行自动布局/" rel="next" title="如何对UIScrollView进行自动布局（Autolayout）">
-                <i class="fa fa-chevron-left"></i> 如何对UIScrollView进行自动布局（Autolayout）
+              <a href="/2017/03/23/IQKeyboardManager框架详解/" rel="next" title="IQKeyboardManager框架详解">
+                <i class="fa fa-chevron-left"></i> IQKeyboardManager框架详解
               </a>
             
           </div>
@@ -422,10 +444,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/24/iOS中NSUserDefaults详解/" rel="prev" title="iOS中NSUserDefaults详解">
-                iOS中NSUserDefaults详解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -474,8 +492,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/23/IQKeyboardManager框架详解/"
-           data-title="IQKeyboardManager框架详解" data-url="http://yoursite.com/2017/03/23/IQKeyboardManager框架详解/">
+      <div class="ds-thread" data-thread-key="2017/03/24/iOS中NSUserDefaults详解/"
+           data-title="iOS中NSUserDefaults详解" data-url="http://yoursite.com/2017/03/24/iOS中NSUserDefaults详解/">
       </div>
     
   </div>
